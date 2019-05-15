@@ -1,0 +1,1696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Testconnection">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Testconnection_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Login">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="password" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Login_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Addlog">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="member" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="key" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="generatedAt" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Addlog_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetPass">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="password" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetPass_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendNotMail">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendNotMail_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CreateCommittee">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="committeeName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="endDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="mandate" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateCommittee_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertMember">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="committecode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="designation" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertMember_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GenerateDirectorPayslip">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="director" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="payperiod" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateDirectorPayslip_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Vote">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="voteitem" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="decision" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Vote_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Register">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="midddlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="othername" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nationality" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="passporta47idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nameoffirm" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pobox" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Register_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddLanguage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="languagCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddLanguage_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccreditationApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="level" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccreditationApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep1">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepTelephone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep1_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep2">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="rfa" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentTelephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentCountry" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentPostCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentCity" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentPhysicalLocation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentlegalRepName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentLegalRepEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentLegalrepAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentLegalRepTelephone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep2_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep3">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorPostCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorTelephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorCity" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorCountry" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitratorPhysicalLocation" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep3_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep4">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="receiptLocation" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfastep4_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Savegeneraldetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nationality1" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nationality2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nameoffirm" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="primaryocuupation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="yearsofarbitration" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="yearsofmediation" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="accreditationparticulars" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fulltimejob" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Savegeneraldetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SaveExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="role" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sector" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="number_of_Mediations" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SaveExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SaveAcademicTraining">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualification" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fromDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="toDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="institution" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="comment" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="trainingrole" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SaveAcademicTraining_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfmstep1">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="claimantName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mobile" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfmstep1_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfmstep2">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="respondentName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mobile" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfmstep2_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Rfmstep3">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Rfmstep3_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Rfmstep4">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Rfmstep4_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="AccreditationRenewal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="accreditationNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccreditationRenewal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddOtherParty">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="role" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="name" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddOtherParty_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Verify">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfmNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="passkey" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Verify_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RfaGeneralDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitrationType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitrationCluster" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="disputeTitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amountInDispute" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="natureOfBusiness" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="languageOfArbitration" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="industryClassification" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitralSeat" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="briefClaimantStatement" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="circumstanceOfDispute" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalBasisofClaim" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="claimantDamagesSummary" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="summaryofReliefSought" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="disputeResolutionClause" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="user" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RfaGeneralDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCustomerPhoto">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCustomerPhoto_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBlob">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="field" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="rfA" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBlob_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintRfa">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="rfaNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintRfa_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep1">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentDecision" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="briefCounterClaim" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseToRfa" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentLoss" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="natureOfBusiness" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="generalComments" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="languageOfArbitration" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="arbitralSeat" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="venue" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep1_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep2">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentTelephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentPhysicalLocation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentPostCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentCity" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentCountry" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep2_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep3">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepEmail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="legalRepTelephone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep3_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep4">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorAddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorPostCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorCity" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorPhysicalLocation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorCountry" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorTelephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="respondentArbitratorEmail" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResponseStep4_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PreviewResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PreviewResponse_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetResponseBlob">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="field" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="rfA" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetResponseBlob_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BookFacility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="date" type="dateTime" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BookFacility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddExtraServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="salesHeaderCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="date" type="dateTime" />
+            <element minOccurs="1" maxOccurs="1" name="service" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddExtraServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SignupContact">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="name" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pinno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="physicallocation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="pObox" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postalcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mobileNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="category" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SignupContact_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ForgotPass">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="registrationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ForgotPass_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ChangePassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ChangePassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PlaceBid">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="contact" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tenderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bidAmount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="regcert" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="pinCert" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="taxCompliance" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="vatCert" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="companyProfile" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="bidBondDoc" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="auditedBooks" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="tenderDoc" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PlaceBid_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendEmail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="recipient" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="subject" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="message" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendEmail_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="FnDeleteTestID">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteTestID_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnIForgotMyPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="customerNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="resetPasswordIs" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnIForgotMyPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetItemImage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="custNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetItemImage_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Testconnection">
+    <part name="parameters" element="tns:Testconnection" />
+  </message>
+  <message name="Testconnection_Result">
+    <part name="parameters" element="tns:Testconnection_Result" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="Login_Result">
+    <part name="parameters" element="tns:Login_Result" />
+  </message>
+  <message name="Addlog">
+    <part name="parameters" element="tns:Addlog" />
+  </message>
+  <message name="Addlog_Result">
+    <part name="parameters" element="tns:Addlog_Result" />
+  </message>
+  <message name="ResetPass">
+    <part name="parameters" element="tns:ResetPass" />
+  </message>
+  <message name="ResetPass_Result">
+    <part name="parameters" element="tns:ResetPass_Result" />
+  </message>
+  <message name="SendNotMail">
+    <part name="parameters" element="tns:SendNotMail" />
+  </message>
+  <message name="SendNotMail_Result">
+    <part name="parameters" element="tns:SendNotMail_Result" />
+  </message>
+  <message name="CreateCommittee">
+    <part name="parameters" element="tns:CreateCommittee" />
+  </message>
+  <message name="CreateCommittee_Result">
+    <part name="parameters" element="tns:CreateCommittee_Result" />
+  </message>
+  <message name="InsertMember">
+    <part name="parameters" element="tns:InsertMember" />
+  </message>
+  <message name="InsertMember_Result">
+    <part name="parameters" element="tns:InsertMember_Result" />
+  </message>
+  <message name="GenerateDirectorPayslip">
+    <part name="parameters" element="tns:GenerateDirectorPayslip" />
+  </message>
+  <message name="GenerateDirectorPayslip_Result">
+    <part name="parameters" element="tns:GenerateDirectorPayslip_Result" />
+  </message>
+  <message name="Vote">
+    <part name="parameters" element="tns:Vote" />
+  </message>
+  <message name="Vote_Result">
+    <part name="parameters" element="tns:Vote_Result" />
+  </message>
+  <message name="Register">
+    <part name="parameters" element="tns:Register" />
+  </message>
+  <message name="Register_Result">
+    <part name="parameters" element="tns:Register_Result" />
+  </message>
+  <message name="AddLanguage">
+    <part name="parameters" element="tns:AddLanguage" />
+  </message>
+  <message name="AddLanguage_Result">
+    <part name="parameters" element="tns:AddLanguage_Result" />
+  </message>
+  <message name="AccreditationApplication">
+    <part name="parameters" element="tns:AccreditationApplication" />
+  </message>
+  <message name="AccreditationApplication_Result">
+    <part name="parameters" element="tns:AccreditationApplication_Result" />
+  </message>
+  <message name="Rfastep1">
+    <part name="parameters" element="tns:Rfastep1" />
+  </message>
+  <message name="Rfastep1_Result">
+    <part name="parameters" element="tns:Rfastep1_Result" />
+  </message>
+  <message name="Rfastep2">
+    <part name="parameters" element="tns:Rfastep2" />
+  </message>
+  <message name="Rfastep2_Result">
+    <part name="parameters" element="tns:Rfastep2_Result" />
+  </message>
+  <message name="Rfastep3">
+    <part name="parameters" element="tns:Rfastep3" />
+  </message>
+  <message name="Rfastep3_Result">
+    <part name="parameters" element="tns:Rfastep3_Result" />
+  </message>
+  <message name="Rfastep4">
+    <part name="parameters" element="tns:Rfastep4" />
+  </message>
+  <message name="Rfastep4_Result">
+    <part name="parameters" element="tns:Rfastep4_Result" />
+  </message>
+  <message name="Savegeneraldetails">
+    <part name="parameters" element="tns:Savegeneraldetails" />
+  </message>
+  <message name="Savegeneraldetails_Result">
+    <part name="parameters" element="tns:Savegeneraldetails_Result" />
+  </message>
+  <message name="SaveExperience">
+    <part name="parameters" element="tns:SaveExperience" />
+  </message>
+  <message name="SaveExperience_Result">
+    <part name="parameters" element="tns:SaveExperience_Result" />
+  </message>
+  <message name="SaveAcademicTraining">
+    <part name="parameters" element="tns:SaveAcademicTraining" />
+  </message>
+  <message name="SaveAcademicTraining_Result">
+    <part name="parameters" element="tns:SaveAcademicTraining_Result" />
+  </message>
+  <message name="Rfmstep1">
+    <part name="parameters" element="tns:Rfmstep1" />
+  </message>
+  <message name="Rfmstep1_Result">
+    <part name="parameters" element="tns:Rfmstep1_Result" />
+  </message>
+  <message name="Rfmstep2">
+    <part name="parameters" element="tns:Rfmstep2" />
+  </message>
+  <message name="Rfmstep2_Result">
+    <part name="parameters" element="tns:Rfmstep2_Result" />
+  </message>
+  <message name="Rfmstep3">
+    <part name="parameters" element="tns:Rfmstep3" />
+  </message>
+  <message name="Rfmstep3_Result">
+    <part name="parameters" element="tns:Rfmstep3_Result" />
+  </message>
+  <message name="Rfmstep4">
+    <part name="parameters" element="tns:Rfmstep4" />
+  </message>
+  <message name="Rfmstep4_Result">
+    <part name="parameters" element="tns:Rfmstep4_Result" />
+  </message>
+  <message name="AccreditationRenewal">
+    <part name="parameters" element="tns:AccreditationRenewal" />
+  </message>
+  <message name="AccreditationRenewal_Result">
+    <part name="parameters" element="tns:AccreditationRenewal_Result" />
+  </message>
+  <message name="AddOtherParty">
+    <part name="parameters" element="tns:AddOtherParty" />
+  </message>
+  <message name="AddOtherParty_Result">
+    <part name="parameters" element="tns:AddOtherParty_Result" />
+  </message>
+  <message name="Verify">
+    <part name="parameters" element="tns:Verify" />
+  </message>
+  <message name="Verify_Result">
+    <part name="parameters" element="tns:Verify_Result" />
+  </message>
+  <message name="RfaGeneralDetails">
+    <part name="parameters" element="tns:RfaGeneralDetails" />
+  </message>
+  <message name="RfaGeneralDetails_Result">
+    <part name="parameters" element="tns:RfaGeneralDetails_Result" />
+  </message>
+  <message name="GetCustomerPhoto">
+    <part name="parameters" element="tns:GetCustomerPhoto" />
+  </message>
+  <message name="GetCustomerPhoto_Result">
+    <part name="parameters" element="tns:GetCustomerPhoto_Result" />
+  </message>
+  <message name="GetBlob">
+    <part name="parameters" element="tns:GetBlob" />
+  </message>
+  <message name="GetBlob_Result">
+    <part name="parameters" element="tns:GetBlob_Result" />
+  </message>
+  <message name="PrintRfa">
+    <part name="parameters" element="tns:PrintRfa" />
+  </message>
+  <message name="PrintRfa_Result">
+    <part name="parameters" element="tns:PrintRfa_Result" />
+  </message>
+  <message name="ResponseStep1">
+    <part name="parameters" element="tns:ResponseStep1" />
+  </message>
+  <message name="ResponseStep1_Result">
+    <part name="parameters" element="tns:ResponseStep1_Result" />
+  </message>
+  <message name="ResponseStep2">
+    <part name="parameters" element="tns:ResponseStep2" />
+  </message>
+  <message name="ResponseStep2_Result">
+    <part name="parameters" element="tns:ResponseStep2_Result" />
+  </message>
+  <message name="ResponseStep3">
+    <part name="parameters" element="tns:ResponseStep3" />
+  </message>
+  <message name="ResponseStep3_Result">
+    <part name="parameters" element="tns:ResponseStep3_Result" />
+  </message>
+  <message name="ResponseStep4">
+    <part name="parameters" element="tns:ResponseStep4" />
+  </message>
+  <message name="ResponseStep4_Result">
+    <part name="parameters" element="tns:ResponseStep4_Result" />
+  </message>
+  <message name="PreviewResponse">
+    <part name="parameters" element="tns:PreviewResponse" />
+  </message>
+  <message name="PreviewResponse_Result">
+    <part name="parameters" element="tns:PreviewResponse_Result" />
+  </message>
+  <message name="GetResponseBlob">
+    <part name="parameters" element="tns:GetResponseBlob" />
+  </message>
+  <message name="GetResponseBlob_Result">
+    <part name="parameters" element="tns:GetResponseBlob_Result" />
+  </message>
+  <message name="BookFacility">
+    <part name="parameters" element="tns:BookFacility" />
+  </message>
+  <message name="BookFacility_Result">
+    <part name="parameters" element="tns:BookFacility_Result" />
+  </message>
+  <message name="AddExtraServices">
+    <part name="parameters" element="tns:AddExtraServices" />
+  </message>
+  <message name="AddExtraServices_Result">
+    <part name="parameters" element="tns:AddExtraServices_Result" />
+  </message>
+  <message name="SignupContact">
+    <part name="parameters" element="tns:SignupContact" />
+  </message>
+  <message name="SignupContact_Result">
+    <part name="parameters" element="tns:SignupContact_Result" />
+  </message>
+  <message name="ForgotPass">
+    <part name="parameters" element="tns:ForgotPass" />
+  </message>
+  <message name="ForgotPass_Result">
+    <part name="parameters" element="tns:ForgotPass_Result" />
+  </message>
+  <message name="ChangePassword">
+    <part name="parameters" element="tns:ChangePassword" />
+  </message>
+  <message name="ChangePassword_Result">
+    <part name="parameters" element="tns:ChangePassword_Result" />
+  </message>
+  <message name="PlaceBid">
+    <part name="parameters" element="tns:PlaceBid" />
+  </message>
+  <message name="PlaceBid_Result">
+    <part name="parameters" element="tns:PlaceBid_Result" />
+  </message>
+  <message name="SendEmail">
+    <part name="parameters" element="tns:SendEmail" />
+  </message>
+  <message name="SendEmail_Result">
+    <part name="parameters" element="tns:SendEmail_Result" />
+  </message>
+  <message name="FnDeleteTestID">
+    <part name="parameters" element="tns:FnDeleteTestID" />
+  </message>
+  <message name="FnDeleteTestID_Result">
+    <part name="parameters" element="tns:FnDeleteTestID_Result" />
+  </message>
+  <message name="FnIForgotMyPassword">
+    <part name="parameters" element="tns:FnIForgotMyPassword" />
+  </message>
+  <message name="FnIForgotMyPassword_Result">
+    <part name="parameters" element="tns:FnIForgotMyPassword_Result" />
+  </message>
+  <message name="GetItemImage">
+    <part name="parameters" element="tns:GetItemImage" />
+  </message>
+  <message name="GetItemImage_Result">
+    <part name="parameters" element="tns:GetItemImage_Result" />
+  </message>
+  <portType name="PortalCodeunit_Port">
+    <operation name="Testconnection">
+      <input name="Testconnection" message="tns:Testconnection" />
+      <output name="Testconnection_Result" message="tns:Testconnection_Result" />
+    </operation>
+    <operation name="Login">
+      <input name="Login" message="tns:Login" />
+      <output name="Login_Result" message="tns:Login_Result" />
+    </operation>
+    <operation name="Addlog">
+      <input name="Addlog" message="tns:Addlog" />
+      <output name="Addlog_Result" message="tns:Addlog_Result" />
+    </operation>
+    <operation name="ResetPass">
+      <input name="ResetPass" message="tns:ResetPass" />
+      <output name="ResetPass_Result" message="tns:ResetPass_Result" />
+    </operation>
+    <operation name="SendNotMail">
+      <input name="SendNotMail" message="tns:SendNotMail" />
+      <output name="SendNotMail_Result" message="tns:SendNotMail_Result" />
+    </operation>
+    <operation name="CreateCommittee">
+      <input name="CreateCommittee" message="tns:CreateCommittee" />
+      <output name="CreateCommittee_Result" message="tns:CreateCommittee_Result" />
+    </operation>
+    <operation name="InsertMember">
+      <input name="InsertMember" message="tns:InsertMember" />
+      <output name="InsertMember_Result" message="tns:InsertMember_Result" />
+    </operation>
+    <operation name="GenerateDirectorPayslip">
+      <input name="GenerateDirectorPayslip" message="tns:GenerateDirectorPayslip" />
+      <output name="GenerateDirectorPayslip_Result" message="tns:GenerateDirectorPayslip_Result" />
+    </operation>
+    <operation name="Vote">
+      <input name="Vote" message="tns:Vote" />
+      <output name="Vote_Result" message="tns:Vote_Result" />
+    </operation>
+    <operation name="Register">
+      <input name="Register" message="tns:Register" />
+      <output name="Register_Result" message="tns:Register_Result" />
+    </operation>
+    <operation name="AddLanguage">
+      <input name="AddLanguage" message="tns:AddLanguage" />
+      <output name="AddLanguage_Result" message="tns:AddLanguage_Result" />
+    </operation>
+    <operation name="AccreditationApplication">
+      <input name="AccreditationApplication" message="tns:AccreditationApplication" />
+      <output name="AccreditationApplication_Result" message="tns:AccreditationApplication_Result" />
+    </operation>
+    <operation name="Rfastep1">
+      <input name="Rfastep1" message="tns:Rfastep1" />
+      <output name="Rfastep1_Result" message="tns:Rfastep1_Result" />
+    </operation>
+    <operation name="Rfastep2">
+      <input name="Rfastep2" message="tns:Rfastep2" />
+      <output name="Rfastep2_Result" message="tns:Rfastep2_Result" />
+    </operation>
+    <operation name="Rfastep3">
+      <input name="Rfastep3" message="tns:Rfastep3" />
+      <output name="Rfastep3_Result" message="tns:Rfastep3_Result" />
+    </operation>
+    <operation name="Rfastep4">
+      <input name="Rfastep4" message="tns:Rfastep4" />
+      <output name="Rfastep4_Result" message="tns:Rfastep4_Result" />
+    </operation>
+    <operation name="Savegeneraldetails">
+      <input name="Savegeneraldetails" message="tns:Savegeneraldetails" />
+      <output name="Savegeneraldetails_Result" message="tns:Savegeneraldetails_Result" />
+    </operation>
+    <operation name="SaveExperience">
+      <input name="SaveExperience" message="tns:SaveExperience" />
+      <output name="SaveExperience_Result" message="tns:SaveExperience_Result" />
+    </operation>
+    <operation name="SaveAcademicTraining">
+      <input name="SaveAcademicTraining" message="tns:SaveAcademicTraining" />
+      <output name="SaveAcademicTraining_Result" message="tns:SaveAcademicTraining_Result" />
+    </operation>
+    <operation name="Rfmstep1">
+      <input name="Rfmstep1" message="tns:Rfmstep1" />
+      <output name="Rfmstep1_Result" message="tns:Rfmstep1_Result" />
+    </operation>
+    <operation name="Rfmstep2">
+      <input name="Rfmstep2" message="tns:Rfmstep2" />
+      <output name="Rfmstep2_Result" message="tns:Rfmstep2_Result" />
+    </operation>
+    <operation name="Rfmstep3">
+      <input name="Rfmstep3" message="tns:Rfmstep3" />
+      <output name="Rfmstep3_Result" message="tns:Rfmstep3_Result" />
+    </operation>
+    <operation name="Rfmstep4">
+      <input name="Rfmstep4" message="tns:Rfmstep4" />
+      <output name="Rfmstep4_Result" message="tns:Rfmstep4_Result" />
+    </operation>
+    <operation name="AccreditationRenewal">
+      <input name="AccreditationRenewal" message="tns:AccreditationRenewal" />
+      <output name="AccreditationRenewal_Result" message="tns:AccreditationRenewal_Result" />
+    </operation>
+    <operation name="AddOtherParty">
+      <input name="AddOtherParty" message="tns:AddOtherParty" />
+      <output name="AddOtherParty_Result" message="tns:AddOtherParty_Result" />
+    </operation>
+    <operation name="Verify">
+      <input name="Verify" message="tns:Verify" />
+      <output name="Verify_Result" message="tns:Verify_Result" />
+    </operation>
+    <operation name="RfaGeneralDetails">
+      <input name="RfaGeneralDetails" message="tns:RfaGeneralDetails" />
+      <output name="RfaGeneralDetails_Result" message="tns:RfaGeneralDetails_Result" />
+    </operation>
+    <operation name="GetCustomerPhoto">
+      <input name="GetCustomerPhoto" message="tns:GetCustomerPhoto" />
+      <output name="GetCustomerPhoto_Result" message="tns:GetCustomerPhoto_Result" />
+    </operation>
+    <operation name="GetBlob">
+      <input name="GetBlob" message="tns:GetBlob" />
+      <output name="GetBlob_Result" message="tns:GetBlob_Result" />
+    </operation>
+    <operation name="PrintRfa">
+      <input name="PrintRfa" message="tns:PrintRfa" />
+      <output name="PrintRfa_Result" message="tns:PrintRfa_Result" />
+    </operation>
+    <operation name="ResponseStep1">
+      <input name="ResponseStep1" message="tns:ResponseStep1" />
+      <output name="ResponseStep1_Result" message="tns:ResponseStep1_Result" />
+    </operation>
+    <operation name="ResponseStep2">
+      <input name="ResponseStep2" message="tns:ResponseStep2" />
+      <output name="ResponseStep2_Result" message="tns:ResponseStep2_Result" />
+    </operation>
+    <operation name="ResponseStep3">
+      <input name="ResponseStep3" message="tns:ResponseStep3" />
+      <output name="ResponseStep3_Result" message="tns:ResponseStep3_Result" />
+    </operation>
+    <operation name="ResponseStep4">
+      <input name="ResponseStep4" message="tns:ResponseStep4" />
+      <output name="ResponseStep4_Result" message="tns:ResponseStep4_Result" />
+    </operation>
+    <operation name="PreviewResponse">
+      <input name="PreviewResponse" message="tns:PreviewResponse" />
+      <output name="PreviewResponse_Result" message="tns:PreviewResponse_Result" />
+    </operation>
+    <operation name="GetResponseBlob">
+      <input name="GetResponseBlob" message="tns:GetResponseBlob" />
+      <output name="GetResponseBlob_Result" message="tns:GetResponseBlob_Result" />
+    </operation>
+    <operation name="BookFacility">
+      <input name="BookFacility" message="tns:BookFacility" />
+      <output name="BookFacility_Result" message="tns:BookFacility_Result" />
+    </operation>
+    <operation name="AddExtraServices">
+      <input name="AddExtraServices" message="tns:AddExtraServices" />
+      <output name="AddExtraServices_Result" message="tns:AddExtraServices_Result" />
+    </operation>
+    <operation name="SignupContact">
+      <input name="SignupContact" message="tns:SignupContact" />
+      <output name="SignupContact_Result" message="tns:SignupContact_Result" />
+    </operation>
+    <operation name="ForgotPass">
+      <input name="ForgotPass" message="tns:ForgotPass" />
+      <output name="ForgotPass_Result" message="tns:ForgotPass_Result" />
+    </operation>
+    <operation name="ChangePassword">
+      <input name="ChangePassword" message="tns:ChangePassword" />
+      <output name="ChangePassword_Result" message="tns:ChangePassword_Result" />
+    </operation>
+    <operation name="PlaceBid">
+      <input name="PlaceBid" message="tns:PlaceBid" />
+      <output name="PlaceBid_Result" message="tns:PlaceBid_Result" />
+    </operation>
+    <operation name="SendEmail">
+      <input name="SendEmail" message="tns:SendEmail" />
+      <output name="SendEmail_Result" message="tns:SendEmail_Result" />
+    </operation>
+    <operation name="FnDeleteTestID">
+      <input name="FnDeleteTestID" message="tns:FnDeleteTestID" />
+      <output name="FnDeleteTestID_Result" message="tns:FnDeleteTestID_Result" />
+    </operation>
+    <operation name="FnIForgotMyPassword">
+      <input name="FnIForgotMyPassword" message="tns:FnIForgotMyPassword" />
+      <output name="FnIForgotMyPassword_Result" message="tns:FnIForgotMyPassword_Result" />
+    </operation>
+    <operation name="GetItemImage">
+      <input name="GetItemImage" message="tns:GetItemImage" />
+      <output name="GetItemImage_Result" message="tns:GetItemImage_Result" />
+    </operation>
+  </portType>
+  <binding name="PortalCodeunit_Binding" type="tns:PortalCodeunit_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Testconnection">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Testconnection" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Testconnection">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Testconnection_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Login" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Login">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Login_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Addlog">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Addlog" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Addlog">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Addlog_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResetPass">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ResetPass" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResetPass">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResetPass_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendNotMail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:SendNotMail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendNotMail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendNotMail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateCommittee">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:CreateCommittee" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateCommittee">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateCommittee_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertMember">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:InsertMember" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertMember">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertMember_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GenerateDirectorPayslip">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GenerateDirectorPayslip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GenerateDirectorPayslip">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GenerateDirectorPayslip_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Vote">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Vote" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Vote">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Vote_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Register">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Register" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Register">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Register_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddLanguage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:AddLanguage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddLanguage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddLanguage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccreditationApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:AccreditationApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccreditationApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccreditationApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfastep1">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfastep1" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfastep1">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfastep1_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfastep2">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfastep2" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfastep2">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfastep2_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfastep3">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfastep3" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfastep3">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfastep3_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfastep4">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfastep4" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfastep4">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfastep4_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Savegeneraldetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Savegeneraldetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Savegeneraldetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Savegeneraldetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SaveExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:SaveExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SaveExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SaveExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SaveAcademicTraining">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:SaveAcademicTraining" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SaveAcademicTraining">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SaveAcademicTraining_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfmstep1">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfmstep1" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfmstep1">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfmstep1_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfmstep2">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfmstep2" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfmstep2">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfmstep2_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfmstep3">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfmstep3" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfmstep3">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfmstep3_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Rfmstep4">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Rfmstep4" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Rfmstep4">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Rfmstep4_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccreditationRenewal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:AccreditationRenewal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccreditationRenewal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccreditationRenewal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddOtherParty">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:AddOtherParty" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddOtherParty">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddOtherParty_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Verify">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:Verify" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Verify">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Verify_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RfaGeneralDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:RfaGeneralDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RfaGeneralDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RfaGeneralDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetCustomerPhoto">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GetCustomerPhoto" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetCustomerPhoto">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetCustomerPhoto_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetBlob">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GetBlob" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetBlob">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetBlob_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintRfa">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:PrintRfa" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintRfa">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintRfa_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResponseStep1">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ResponseStep1" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResponseStep1">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResponseStep1_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResponseStep2">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ResponseStep2" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResponseStep2">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResponseStep2_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResponseStep3">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ResponseStep3" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResponseStep3">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResponseStep3_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResponseStep4">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ResponseStep4" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResponseStep4">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResponseStep4_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PreviewResponse">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:PreviewResponse" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PreviewResponse">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PreviewResponse_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetResponseBlob">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GetResponseBlob" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetResponseBlob">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetResponseBlob_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="BookFacility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:BookFacility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BookFacility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BookFacility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddExtraServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:AddExtraServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddExtraServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddExtraServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SignupContact">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:SignupContact" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SignupContact">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SignupContact_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ForgotPass">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ForgotPass" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ForgotPass">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ForgotPass_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:ChangePassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ChangePassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ChangePassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PlaceBid">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:PlaceBid" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PlaceBid">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PlaceBid_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendEmail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:SendEmail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendEmail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendEmail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteTestID">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnDeleteTestID" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteTestID">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteTestID_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnIForgotMyPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:FnIForgotMyPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnIForgotMyPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnIForgotMyPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetItemImage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PortalCodeunit:GetItemImage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetItemImage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetItemImage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PortalCodeunit">
+    <port name="PortalCodeunit_Port" binding="tns:PortalCodeunit_Binding">
+      <address location="http://dynasoft:9047/DynamicsNAV100/WS/NCIA/Codeunit/PortalCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
